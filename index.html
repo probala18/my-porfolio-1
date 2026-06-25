@@ -3,283 +3,323 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Balasundar portfolio - full stack developer building fast, useful, and polished web products.">
     <title>Balasundar - Full Stack Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="bg-orb bg-orb-1"></div>
-    <div class="bg-orb bg-orb-2"></div>
-    <div class="bg-grid"></div>
+    <div class="page-noise" aria-hidden="true"></div>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">JD</div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="nav-right">
-                <button class="theme-toggle" id="theme-toggle" title="Toggle dark mode">
-                    <i class="fas fa-moon"></i>
-                </button>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
+    <nav class="navbar" aria-label="Primary navigation">
+        <a href="#home" class="logo" aria-label="Balasundar home">
+            <span>B</span>
+            <strong>Balasundar</strong>
+        </a>
+
+        <ul class="nav-menu">
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="hamburger" type="button" aria-label="Open navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <p class="hero-kicker">Available for select freelance projects</p>
-            <h1 class="hero-title">Hi, I'm Balasundar</h1>
-            <p class="hero-subtitle">Full Stack Developer & Creative Thinker</p>
-            <p class="hero-description">I build beautiful and functional websites that solve real-world problems</p>
-            <a href="#projects" class="btn btn-primary">View My Work</a>
-        </div>
-        <div class="hero-image">
-            <div class="profile-circle"></div>
-        </div>
-    </section>
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">Developer • Designer • AI Builder</p>
+                <h1>Building AI-powered products and intelligent agents that feel fast, useful, and effortless.</h1>
+                <p class="hero-description">
+                    I build React, TypeScript, Node.js, and AI-enabled applications with a focus on clean interfaces,
+                    reliable flows, and details that make products easier to use.
+                </p>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Welcome to my portfolio! I'm a passionate full stack developer with 5+ years of experience in creating responsive and user-friendly web applications. I specialize in JavaScript, React, Node.js, and modern web technologies.</p>
-                    <p>I love learning new technologies and solving complex problems. When I'm not coding, you can find me exploring the latest tech trends or contributing to open-source projects.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-icon" title="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-icon" title="Email"><i class="fas fa-envelope"></i></a>
-                    </div>
-                </div>
-                <div class="about-stats">
-                    <div class="stat-card">
-                        <h3>50+</h3>
-                        <p>Projects Completed</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>30+</h3>
-                        <p>Happy Clients</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>5+</h3>
-                        <p>Years Experience</p>
-                    </div>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-layer-group"></i>
+                        View projects
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-paper-plane"></i>
+                        Start a conversation
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Skills</h2>
+            <div class="hero-visual" data-tilt>
+                <div class="portrait-shell">
+                    <img src="my_picture.jpeg" alt="Balasundar portrait">
+                    <div class="availability-card">
+                        <span></span>
+                        Ready to Build
+                    </div>
+                </div>
+                <div class="hero-panel">
+                    <p>Current focus</p>
+                    <strong>AI agents, intelligent workflows, full-stack applications, and modern interface design.</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="metrics" aria-label="Portfolio highlights">
+            <div class="metric">
+                <strong data-count="50">0</strong>
+                <span>Projects shipped</span>
+            </div>
+            <div class="metric">
+                <strong data-count="30">0</strong>
+                <span>Client and team outcomes</span>
+            </div>
+            <div class="metric">
+                <strong data-count="5">0</strong>
+                <span>Years building</span>
+            </div>
+            <div class="metric">
+                <strong>24/7</strong>
+                <span>Learning loop</span>
+            </div>
+        </section>
+
+        <section class="story-marquee" aria-label="What I build">
+            <div class="marquee-track">
+                <span>Building AI Agents</span>
+                <span>Creating Intelligent Workflows</span>
+                <span>Developing Full-Stack Applications</span>
+                <span>Crafting Modern User Experiences</span>
+                <span>Automating Business Processes</span>
+                <span>Turning Ideas into Scalable Products</span>
+                <span>Building AI Agents</span>
+                <span>Creating Intelligent Workflows</span>
+                <span>Developing Full-Stack Applications</span>
+                <span>Crafting Modern User Experiences</span>
+                <span>Automating Business Processes</span>
+                <span>Turning Ideas into Scalable Products</span>
+            </div>
+        </section>
+
+        <section id="about" class="section split-section">
+            <div>
+                <p class="section-kicker">About</p>
+                <h2 class="section-title text-reveal">I turn ideas into AI-powered products with intuitive interfaces and seamless user experiences.</h2>
+            </div>
+            <div class="section-copy">
+                <p>
+                    I design and build AI-powered products, combining intuitive user interfaces with scalable full-stack systems. My work spans AI agents, intelligent assistants, dashboards, SaaS platforms, portfolio websites, and modern digital experiences, with a strong focus on usability, clarity, and performance.
+                </p>
+                <p>
+                    My design approach blends thoughtful interaction design, clean visual systems, and purposeful motion to create experiences that feel seamless, engaging, and easy to use.
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-icon" title="GitHub" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-icon" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-icon" title="Twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon" title="Email" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="section-heading">
+                <p class="section-kicker">Capabilities</p>
+                <h2 class="section-title">A practical stack for modern web builds.</h2>
+            </div>
+
             <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Frontend</h3>
+                <article class="skill-card">
+                    <span class="skill-number">01</span>
+                    <h3>Frontend craft</h3>
+                    <p>Responsive interfaces, component systems, motion, forms, and dashboards.</p>
                     <div class="skill-tags">
-                        <span class="skill-tag">HTML5</span>
-                        <span class="skill-tag">CSS3</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Typescript</span>
-                        <span class="skill-tag">Tailwind CSS</span>
+                        <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React</span><span>TypeScript</span><span>Tailwind</span>
                     </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Backend</h3>
+                </article>
+                <article class="skill-card">
+                    <span class="skill-number">02</span>
+                    <h3>Backend logic</h3>
+                    <p>APIs, auth-ready flows, data models, integrations, and application services.</p>
                     <div class="skill-tags">
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">Express</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">MongoDB</span>
-                        <span class="skill-tag">PostgreSQL</span>
-                        <span class="skill-tag">REST APIs</span>
+                        <span>Node.js</span><span>Express</span><span>Python</span><span>MongoDB</span><span>PostgreSQL</span><span>REST APIs</span>
                     </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Tools & Platforms</h3>
+                </article>
+                <article class="skill-card">
+                    <span class="skill-number">03</span>
+                    <h3>Product tooling</h3>
+                    <p>Design handoff, deployment workflows, source control, and fast iteration loops.</p>
                     <div class="skill-tags">
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">AWS</span>
-                        <span class="skill-tag">VS Code</span>
-                        <span class="skill-tag">Figma</span>
+                        <span>Git</span><span>AWS</span><span>VS Code</span><span>Figma</span><span>Vite</span><span>shadcn/ui</span>
                     </div>
-                </div>
+                </article>
+                <article class="skill-card">
+                    <span class="skill-number">04</span>
+                    <h3>Intelligent Systems</h3>
+                    <p>Creating AI-native applications that combine reasoning, retrieval, automation, and modern user experiences.</p>
+                    <div class="skill-tags">
+                        <span>RAG Pipelines</span><span>Vector Search</span><span>Knowledge Bases</span><span>AI Chatbots</span><span>Voice Agents</span><span>Automation Tools</span>
+                    </div>
+                </article>
+                <article class="skill-card">
+                    <span class="skill-number">05</span>
+                    <h3>AI Agents & Automation</h3>
+                    <p>Building intelligent agents, workflow automation, tool-calling systems, and AI-powered experiences.</p>
+                    <div class="skill-tags">
+                        <span>OpenAI</span><span>LangChain</span><span>LangGraph</span><span>RAG</span><span>MCP</span><span>Vector Databases</span><span>Tool Calling</span>
+                    </div>
+                </article>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Recent Projects</h2>
+        <section id="projects" class="section projects">
+            <div class="section-heading">
+                <p class="section-kicker">Selected work</p>
+                <h2 class="section-title">Projects with clear systems and visible outcomes.</h2>
+            </div>
+
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
-                    <div class="project-content">
-                        <h3>E-Commerce Platform</h3>
-                        <p>A full-featured e-commerce platform built with React and Node.js featuring product listings, shopping cart, and payment integration.</p>
-                        <div class="project-tech">
-                            <span>React</span>
-                            <span>Vite</span>
-                            <span>Tailwind CSS</span>
-                            <span>Typescript</span>
-                            <span>Node.js</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">View Live</a>
-                            <a href="https://github.com/proBala03/e-commerce-app" class="project-link">GitHub</a>
-                        </div>
+                <article class="project-card">
+                    <div class="project-media media-auction">
+                        <i class="fas fa-gavel"></i>
                     </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
                     <div class="project-content">
-                        <h3>Life Pilot AI</h3>
-                        <p>A smart AI assistant for personal life management with task automation, user authentication, and team features.</p>
-                        <div class="project-tech">
-                            <span>React</span>
-                            <span>Typescript</span>
-                            <span>Tailwind CSS</span>
-                            <span>vite</span>
-                            <span>Express</span>
-                            <span>Amazon Bedrock API</span>
-                            <span>better-sqlite3</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">View Live</a>
-                            <a href="https://github.com/proBala03/life-pilot-ai" class="project-link">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
-                    <div class="project-content">
-                        <h3>climateFusionX</h3>
-                        <p>A comprehensive climate analysis platform providing real-time weather data, predictive modeling, and environmental insights.</p>
-                        <div class="project-tech">
-                            <span>React</span>
-                            <span>Typescript</span>
-                            <span>Vite</span>
-                            <span>Tailwind CSS</span>
-                            <span>express.js</span>
-                            
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">View Live</a>
-                            <a href="https://github.com/proBala03/climateFusionX" class="project-link">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
-                    <div class="project-content">
+                        <p class="project-type">Auction dashboard</p>
                         <h3>Over-The-Wicket-Bid</h3>
-                        <p>A web application for managing and optimizing cricket betting strategies with real-time data and analytics.</p>
+                        <p>An IPL auction studio with live bidding, purse tracking, player pools, squad inspection, and animated controls.</p>
                         <div class="project-tech">
-                            <span>Vite</span>
-                            <span>TypeScript</span>
-                            <span>React</span>
-                            <span>shadcn-ui</span>
-                            <span>Tailwind CSS</span>
-                            <span>Node.js</span>
+                            <span>Vite</span><span>TypeScript</span><span>React</span><span>shadcn/ui</span><span>Tailwind</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">View Live</a>
-                            <a href="https://github.com/proBala03/over-the-wicket-bid" class="project-link">GitHub</a>
+                            <a href="#">View Live</a>
+                            <a href="https://github.com/proBala03/over-the-wicket-bid">GitHub</a>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);"></div>
+                <article class="project-card">
+                    <div class="project-media media-ai">
+                        <i class="fas fa-wand-magic-sparkles"></i>
+                    </div>
                     <div class="project-content">
-                        <h3>Social Media Analytics</h3>
-                        <p>A comprehensive analytics dashboard for tracking social media performance and engagement metrics.</p>
+                        <p class="project-type">AI assistant</p>
+                        <h3>Life Pilot AI</h3>
+                        <p>A smart assistant for personal life management with task automation, authentication, and team features.</p>
                         <div class="project-tech">
-                            <span>Node.js</span>
-                            <span>PostgreSQL</span>
-                            <span>Chart.js</span>
+                            <span>React</span><span>TypeScript</span><span>Express</span><span>Amazon Bedrock</span><span>SQLite</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">View Live</a>
-                            <a href="#" class="project-link">GitHub</a>
+                            <a href="#">View Live</a>
+                            <a href="https://github.com/proBala03/lifepilot-ai">GitHub</a>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #ff9a56 0%, #ff6a88 100%);"></div>
+                <article class="project-card">
+                    <div class="project-media media-docs">
+                        <i class="fas fa-file-lines"></i>
+                    </div>
                     <div class="project-content">
-                        <h3>Learning Management System</h3>
-                        <p>An LMS platform for online education with course management, student progress tracking, and certification features.</p>
+                        <p class="project-type">AI document tool</p>
+                        <h3>AI Document Summarizer</h3>
+                        <p>An AI-powered document summarization app for extracting concise insights from longer files and written content.</p>
                         <div class="project-tech">
-                            <span>React</span>
-                            <span>Express</span>
-                            <span>MySQL</span>
+                            <span>AI</span><span>Summarization</span><span>Documents</span><span>RAG</span><span>Full Stack</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">View Live</a>
-                            <a href="#" class="project-link">GitHub</a>
+                            <a href="#">View Live</a>
+                            <a href="https://github.com/proBala03/AI-Document-Summarizer">GitHub</a>
                         </div>
                     </div>
-                </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-media media-commerce">
+                        <i class="fas fa-bag-shopping"></i>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-type">Commerce</p>
+                        <h3>E-Commerce Platform</h3>
+                        <p>A full-featured commerce app with product listings, shopping cart, and payment-ready flow architecture.</p>
+                        <div class="project-tech">
+                            <span>React</span><span>Vite</span><span>Tailwind</span><span>TypeScript</span><span>Node.js</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#">View Live</a>
+                            <a href="https://github.com/proBala03/e-commerce-app">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-media media-climate">
+                        <i class="fas fa-cloud-sun-rain"></i>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-type">Data platform</p>
+                        <h3>climateFusionX</h3>
+                        <p>A climate analysis platform for weather data, predictive modeling, and environmental insights.</p>
+                        <div class="project-tech">
+                            <span>React</span><span>TypeScript</span><span>Vite</span><span>Tailwind</span><span>Express</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#">View Live</a>
+                            <a href="https://github.com/proBala03/climateFusionX">GitHub</a>
+                        </div>
+                    </div>
+                </article>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="contact-subtitle">Have a project in mind? Let's talk!</p>
-            <form class="contact-form">
-                <div class="form-group">
-                    <input type="text" placeholder="Your Name" required>
+        <section id="contact" class="section contact">
+            <div class="contact-panel">
+                <div>
+                    <p class="section-kicker">Contact</p>
+                    <h2 class="section-title">Have a build in mind? Send the brief.</h2>
+                    <p class="contact-subtitle">Share the product goal, timeline, and the kind of experience you want users to have.</p>
                 </div>
-                <div class="form-group">
-                    <input type="email" placeholder="Your Email" required>
-                </div>
-                <div class="form-group">
-                    <textarea placeholder="Your Message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Send Message</button>
-            </form>
-        </div>
-    </section>
+                <form class="contact-form">
+                    <label>
+                        <span>Your name</span>
+                        <input type="text" placeholder="Balasundar" required>
+                    </label>
+                    <label>
+                        <span>Email</span>
+                        <input type="email" placeholder="you@example.com" required>
+                    </label>
+                    <label>
+                        <span>Message</span>
+                        <textarea placeholder="Tell me about your project" rows="5" required></textarea>
+                    </label>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Send message
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
 
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Balasundar. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Sitemap</a>
-            </div>
-        </div>
+        <p>&copy; 2026 Balasundar. Built with HTML, CSS, GSAP, Lenis, and Motion.</p>
+        <a href="#home">Back to top</a>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/motion@10.18.0/+esm"></script>
     <script src="script.js"></script>
 </body>
 </html>
