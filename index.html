@@ -47,7 +47,7 @@
     <main>
         <section id="home" class="hero">
             <div class="hero-copy">
-                <p class="eyebrow">Developer • Designer • AI Builder</p>
+                <p class="eyebrow">Developer &bull; Designer &bull; AI Builder</p>
                 <h1>Building AI-powered products, intelligent agents, and modern web experiences that feel fast, useful, and effortless.</h1>
                 <p class="hero-description">
                     I build React, TypeScript, Node.js, and AI-enabled applications with a focus on clean interfaces,
@@ -137,9 +137,9 @@
                 </p>
                 <div class="social-links">
                     <a href="https://github.com/proBala18" class="social-icon" title="GitHub" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="www.linkedin.com/in/bala-sundar-5a86b4353" class="social-icon" title="LinkedIn" aria-label="LinkedIn"><i
+                    <a href="https://www.linkedin.com/in/bala-sundar-5a86b4353" class="social-icon" title="LinkedIn" aria-label="LinkedIn"><i
                             class="fab fa-linkedin"></i></a>
-                    <a href="balasundar0307@gmail.com" class="social-icon" title="Email" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="mailto:balasundar0307@gmail.com" class="social-icon" title="Email" aria-label="Email"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
         </section>
@@ -151,8 +151,11 @@
             </div>
 
             <div class="skills-grid">
-                <article class="skill-card">
-                    <span class="skill-number">01</span>
+                <article class="skill-card skill-featured">
+                    <div class="skill-card-top">
+                        <span class="skill-number">01</span>
+                        <span class="skill-icon"><i class="fas fa-code"></i></span>
+                    </div>
                     <h3>Frontend craft</h3>
                     <p>Responsive interfaces, component systems, motion, forms, and dashboards.</p>
                     <div class="skill-tags">
@@ -160,7 +163,10 @@
                     </div>
                 </article>
                 <article class="skill-card">
-                    <span class="skill-number">02</span>
+                    <div class="skill-card-top">
+                        <span class="skill-number">02</span>
+                        <span class="skill-icon"><i class="fas fa-server"></i></span>
+                    </div>
                     <h3>Backend logic</h3>
                     <p>Backend fundamentals, REST API development, authentication-ready architecture, database integration, and scalable application logic.</p>
                     <div class="skill-tags">
@@ -169,7 +175,10 @@
                     </div>
                 </article>
                 <article class="skill-card">
-                    <span class="skill-number">03</span>
+                    <div class="skill-card-top">
+                        <span class="skill-number">03</span>
+                        <span class="skill-icon"><i class="fas fa-screwdriver-wrench"></i></span>
+                    </div>
                     <h3>Product tooling</h3>
                     <p>Design handoff, deployment workflows, source control, and fast iteration loops.</p>
                     <div class="skill-tags">
@@ -177,8 +186,11 @@
                             Code</span><span>Figma</span><span>Vite</span><span>shadcn/ui</span>
                     </div>
                 </article>
-                <article class="skill-card">
-                    <span class="skill-number">04</span>
+                <article class="skill-card skill-tall">
+                    <div class="skill-card-top">
+                        <span class="skill-number">04</span>
+                        <span class="skill-icon"><i class="fas fa-brain"></i></span>
+                    </div>
                     <h3>Intelligent Systems</h3>
                     <p>Creating AI-native applications that combine reasoning, retrieval, automation, and modern user
                         experiences.</p>
@@ -187,8 +199,11 @@
                             Chatbots</span><span>Voice Agents</span><span>Automation Tools</span>
                     </div>
                 </article>
-                <article class="skill-card">
-                    <span class="skill-number">05</span>
+                <article class="skill-card skill-wide">
+                    <div class="skill-card-top">
+                        <span class="skill-number">05</span>
+                        <span class="skill-icon"><i class="fas fa-robot"></i></span>
+                    </div>
                     <h3>AI Agents & Automation</h3>
                     <p>Building intelligent agents, workflow automation, tool-calling systems, and AI-powered
                         experiences.</p>
@@ -207,7 +222,7 @@
             </div>
 
             <div class="projects-grid">
-                <article class="project-card">
+                <article class="project-card project-featured">
                     <div class="project-media media-auction">
                         <i class="fas fa-gavel"></i>
                     </div>
@@ -216,17 +231,21 @@
                         <h3>IPL-Auction-Bid</h3>
                         <p>An IPL auction studio with live bidding, purse tracking, player pools, squad inspection, and
                             animated controls.</p>
+                        <div class="project-meta">
+                            <span><strong>Live</strong> bidding flow</span>
+                            <span><strong>Squad</strong> inspection tools</span>
+                        </div>
                         <div class="project-tech">
                             <span>Vite</span><span>TypeScript</span><span>React</span><span>shadcn/ui</span><span>Tailwind</span>
                         </div>
                         <div class="project-links">
                             <a href="#">View Live</a>
-                            <a href="https://github.com/proBala03/IPL-Auction-Bid">GitHub</a>
+                            <a href="https://github.com/probala18/IPL-Auction-Bid">GitHub</a>
                         </div>
                     </div>
                 </article>
 
-                <article class="project-card">
+                <article class="project-card project-tall">
                     <div class="project-media media-ai">
                         <i class="fas fa-wand-magic-sparkles"></i>
                     </div>
@@ -246,7 +265,7 @@
                     </div>
                 </article>
 
-                <article class="project-card">
+                <article class="project-card project-wide">
                     <div class="project-media media-docs">
                         <i class="fas fa-file-lines"></i>
                     </div>
@@ -354,7 +373,7 @@
                     <form class="contact-form">
                         <label>
                             <span>Your name</span>
-                            <input type="text" placeholder="John Doe" required>
+                            <input type="text" placeholder="Your Name" required>
                         </label>
                         <label>
                             <span>Email</span>
@@ -386,8 +405,34 @@
     </main>
 
     <footer class="footer">
-        <p>&copy; 2026 Balasundar. Built with HTML, CSS, GSAP, Lenis, and Motion.</p>
-        <a href="#home">Back to top</a>
+        <div class="footer-brand">
+            <a href="#home" class="footer-logo" aria-label="Balasundar home">
+                <span>B</span>
+                <strong>Balasundar</strong>
+            </a>
+            <p>Full-stack developer building AI-powered products, intelligent workflows, and polished web experiences.</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+            <a href="#about">About</a>
+            <a href="#skills">Capabilities</a>
+            <a href="#projects">Selected work</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="footer-contact">
+            <a href="mailto:balasundar0307@gmail.com">balasundar0307@gmail.com</a>
+            <div class="footer-socials">
+                <a href="https://github.com/proBala18" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/bala-sundar-5a86b4353" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#home" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Balasundar. Built with HTML, CSS, GSAP, Lenis, and Motion.</p>
+            <span>Available for freelance and collaboration</span>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>

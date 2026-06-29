@@ -319,17 +319,12 @@ if (tiltTarget && !prefersReducedMotion) {
 
 document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('mousemove', event => {
-        if (window.innerWidth < 900 || prefersReducedMotion) return;
+        if (prefersReducedMotion) return;
         const rect = card.getBoundingClientRect();
-        const x = event.clientX - rect.left;
-        const y = event.clientY - rect.top;
-        const rotateX = -((y - rect.height / 2) / 28);
-        const rotateY = (x - rect.width / 2) / 28;
-        card.style.transform = `perspective(1100px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
-    });
-
-    card.addEventListener('mouseleave', () => {
-        card.style.transform = 'perspective(1100px) rotateX(0deg) rotateY(0deg) translateY(0)';
+        const x = ((event.clientX - rect.left) / rect.width) * 100;
+        const y = ((event.clientY - rect.top) / rect.height) * 100;
+        card.style.setProperty('--project-glow-x', `${x}%`);
+        card.style.setProperty('--project-glow-y', `${y}%`);
     });
 });
 
@@ -372,15 +367,20 @@ contactForm.addEventListener('submit', event => {
 
     const name = contactForm.querySelector('input[type="text"]').value.trim();
     const email = contactForm.querySelector('input[type="email"]').value.trim();
+    const projectType = contactForm.querySelector('select').value;
     const message = contactForm.querySelector('textarea').value.trim();
 
-    if (!name || !email || !message) {
+    if (!name || !email || !projectType || !message) {
         alert('Please fill in all fields.');
         return;
     }
 
-    alert(`Thanks, ${name}. Your message is ready to be sent.`);
-    contactForm.reset();
+    const subject = encodeURIComponent(`Portfolio inquiry from ${name}`);
+    const body = encodeURIComponent(
+        `Name: ${name}\nEmail: ${email}\nProject type: ${projectType}\n\nMessage:\n${message}`
+    );
+
+    window.location.href = `mailto:balasundar0307@gmail.com?subject=${subject}&body=${body}`;
 });
 
 window.addEventListener('load', async () => {
