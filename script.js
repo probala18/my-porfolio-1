@@ -18,6 +18,7 @@ themeToggle.addEventListener('click', () => {
     const isDark = body.classList.contains('dark-mode');
     themeToggle.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    if (window.ScrollTrigger) ScrollTrigger.refresh(true);
 });
 
 hamburger.addEventListener('click', () => {
@@ -144,15 +145,16 @@ if (window.gsap && window.ScrollTrigger && !prefersReducedMotion) {
                         end: '+=140%',
                         pin: true,
                         scrub: 0.8,
-                        anticipatePin: 1
+                        anticipatePin: 1,
+                        invalidateOnRefresh: true
                     }
                 })
                 .fromTo(aboutWords, {
-                    color: '#444',
-                    opacity: 0.55,
+                    color: () => getComputedStyle(document.body).getPropertyValue('--muted').trim(),
+                    opacity: 0,
                     y: 18
                 }, {
-                    color: '#ffffff',
+                    color: () => getComputedStyle(document.body).getPropertyValue('--ink').trim(),
                     opacity: 1,
                     y: 0,
                     stagger: 0.05,
