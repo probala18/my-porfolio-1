@@ -189,32 +189,71 @@ if (window.gsap && window.ScrollTrigger && !prefersReducedMotion) {
 
     gsap.timeline({
         scrollTrigger: {
-            trigger: '.contact-panel',
-            start: 'top 78%',
+            trigger: '.contact',
+            start: 'top 75%',
             once: true
         }
     })
-        .from('.contact-panel', {
-            y: 54,
+        .from('.contact-header .section-kicker', {
+            y: 20,
             opacity: 0,
-            rotateX: 4,
-            duration: 0.9,
-            ease: 'power3.out'
+            duration: 0.5,
+            ease: 'power2.out'
         })
-        .from('.contact-panel .section-kicker, .contact-panel .section-title, .contact-subtitle', {
-            y: 24,
+        .from('.contact-header .section-title', {
+            y: 30,
+            opacity: 0,
+            duration: 0.65,
+            ease: 'power3.out'
+        }, '-=0.25')
+        .from('.contact-subtitle', {
+            y: 20,
             opacity: 0,
             duration: 0.55,
-            stagger: 0.08,
             ease: 'power2.out'
-        }, '-=0.45')
-        .from('.contact-form label, .contact-form button', {
-            x: 26,
+        }, '-=0.3')
+        .from('.contact-card', {
+            x: -35,
             opacity: 0,
-            duration: 0.52,
+            scale: 0.96,
+            duration: 0.6,
+            stagger: 0.12,
+            ease: 'power2.out'
+        }, '-=0.2')
+        .from('.contact-availability', {
+            x: -25,
+            opacity: 0,
+            duration: 0.5,
+            ease: 'power2.out'
+        }, '-=0.3')
+        .from('.contact-form-panel', {
+            y: 50,
+            opacity: 0,
+            rotateX: 4,
+            scale: 0.97,
+            duration: 0.85,
+            ease: 'power3.out'
+        }, '-=0.6')
+        .from('.contact-form-title', {
+            y: 14,
+            opacity: 0,
+            duration: 0.4,
+            ease: 'power2.out'
+        }, '-=0.4')
+        .from('.contact-form label', {
+            y: 18,
+            opacity: 0,
+            duration: 0.4,
             stagger: 0.08,
             ease: 'power2.out'
-        }, '-=0.42');
+        }, '-=0.25')
+        .from('.btn-submit', {
+            y: 14,
+            opacity: 0,
+            scale: 0.95,
+            duration: 0.5,
+            ease: 'back.out(1.4)'
+        }, '-=0.15');
 
     gsap.utils.toArray('.project-media').forEach(media => {
         gsap.to(media, {
